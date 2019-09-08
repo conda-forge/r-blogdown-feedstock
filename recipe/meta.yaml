@@ -1,4 +1,4 @@
-{% set version = '0.14' %}
+{% set version = '0.15' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/blogdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blogdown/blogdown_{{ version }}.tar.gz
-  sha256: 91f5fb5a2c3cfa3d256bd7ba8dd7e4d755d32c9e4fd5d3ea82d62f11a5e4863c
+  sha256: 71a89854ee6e149b7d76d3b5f52fc83f0751be89aaf5d772c1a05bab49c300d1
 
 build:
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -56,7 +56,8 @@ about:
     generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>)
     and 'Hexo' (<https://hexo.io>).
   license_family: GPL3
-  license_file: '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
 
 extra:
   recipe-maintainers:
@@ -66,7 +67,7 @@ extra:
 # Package: blogdown
 # Type: Package
 # Title: Create Blogs and Websites with R Markdown
-# Version: 0.14
+# Version: 0.15
 # Authors@R: c( person("Yihui", "Xie", role = c("aut", "cre"), email = "xie@yihui.name", comment = c(ORCID = "0000-0003-0645-5666")), person("Beilei", "Bian", role = "ctb"), person("Forest", "Fang", role = "ctb"), person("Garrick", "Aden-Buie", role = "ctb"), person("Hiroaki", "Yutani", role = "ctb"), person("Ian", "Lyttle", role = "ctb"), person("JJ", "Allaire", role = "ctb"), person("Kevin", "Ushey", role = "ctb"), person("Leonardo", "Collado-Torres", role = "ctb"), person("Xianying", "Tan", role = "ctb"), person("Raniere", "Silva", role = "ctb"), person("Jozef", "Hajnala", role = "ctb"), person(family = "RStudio Inc", role = "cph"), person() )
 # Description: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
 # License: GPL-3
@@ -79,8 +80,8 @@ extra:
 # RoxygenNote: 6.1.1
 # Encoding: UTF-8
 # NeedsCompilation: no
-# Packaged: 2019-07-13 03:48:37 UTC; yihui
+# Packaged: 2019-08-20 21:41:48 UTC; yihui
 # Author: Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>), Beilei Bian [ctb], Forest Fang [ctb], Garrick Aden-Buie [ctb], Hiroaki Yutani [ctb], Ian Lyttle [ctb], JJ Allaire [ctb], Kevin Ushey [ctb], Leonardo Collado-Torres [ctb], Xianying Tan [ctb], Raniere Silva [ctb], Jozef Hajnala [ctb], RStudio Inc [cph]
 # Maintainer: Yihui Xie <xie@yihui.name>
 # Repository: CRAN
-# Date/Publication: 2019-07-13 04:40:02 UTC
+# Date/Publication: 2019-08-21 07:40:10 UTC
