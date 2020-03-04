@@ -1,4 +1,4 @@
-{% set version = "0.17" %}
+{% set version = "0.18" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/blogdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blogdown/blogdown_{{ version }}.tar.gz
-  sha256: 798ce9ee38dabddaf2b893a3d6f1ee8bd518aab8c7893a4bd2fbaa44dbd44ec6
+  sha256: 5466452a310b140cf660a77b7ae6dbf01b64adeb801486bc47fc0e80f4f85481
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -52,12 +52,11 @@ test:
 about:
   home: https://github.com/rstudio/blogdown
   license: GPL-3
-  summary: Write blog posts and web pages in R Markdown. This package supports the static site
-    generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>)
-    and 'Hexo' (<https://hexo.io>).
+  summary: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll'
+    (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
