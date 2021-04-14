@@ -25,23 +25,25 @@ requirements:
     - {{ posix }}zip               # [win]
   host:
     - r-base
-    - r-bookdown >=0.9
+    - r-bookdown >=0.14
     - r-htmltools
     - r-httpuv >=1.4.0
-    - r-knitr >=1.21
-    - r-rmarkdown >=1.11
-    - r-servr >=0.13
-    - r-xfun >=0.5
+    - r-knitr >=1.25
+    - r-later
+    - r-rmarkdown >=2.6
+    - r-servr >=0.21
+    - r-xfun >=0.22
     - r-yaml >=2.1.19
   run:
     - r-base
-    - r-bookdown >=0.9
+    - r-bookdown >=0.14
     - r-htmltools
     - r-httpuv >=1.4.0
-    - r-knitr >=1.21
-    - r-rmarkdown >=1.11
-    - r-servr >=0.13
-    - r-xfun >=0.5
+    - r-knitr >=1.25
+    - r-later
+    - r-rmarkdown >=2.6
+    - r-servr >=0.21
+    - r-xfun >=0.22
     - r-yaml >=2.1.19
 
 test:
@@ -51,7 +53,7 @@ test:
 
 about:
   home: https://github.com/rstudio/blogdown
-  license: GPL-3
+  license: GPL-3.0-only
   summary: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
   license_family: GPL3
   license_file:
