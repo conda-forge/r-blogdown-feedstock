@@ -1,4 +1,4 @@
-{% set version = "1.9" %}
+{% set version = "1.10" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/blogdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blogdown/blogdown_{{ version }}.tar.gz
-  sha256: e9c22bd63d410844e8e753be6166a6cb5fe00ed65ae5979cabfd4fb34cb9ce5c
+  sha256: e2dfb81fd09d1eb885154c2615226610e916ab85865ed64e6c3c46fd363e42d1
 
 build:
   merge_build_host: true  # [win]
