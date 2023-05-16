@@ -1,11 +1,11 @@
-About r-blogdown
-================
+About r-blogdown-feedstock
+==========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-blogdown-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/rstudio/blogdown
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-blogdown-feedstock/blob/main/LICENSE.txt)
 
 Summary: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
 
