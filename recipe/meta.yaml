@@ -1,4 +1,4 @@
-{% set version = "1.20" %}
+{% set version = "1.21" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/blogdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blogdown/blogdown_{{ version }}.tar.gz
-  sha256: 0bb580939a81debb7945c161be413f15778a4c672350c017ce4d788865948dcc
+  sha256: 1a897d8fcb9a7020c867d88787a92861c9802e8b818acd48ecd6b24975155303
 
 build:
   number: 0
