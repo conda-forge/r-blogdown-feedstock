@@ -1,15 +1,15 @@
-{% set version = "1.23" %}
+{% set version = "1.24" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
   name: r-blogdown
-  version: {{ version|replace("-", "_") }}
+  version: "{{ version|replace("-", "_") }}"
 
 source:
   url:
     - {{ cran_mirror }}/src/contrib/blogdown_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/blogdown/blogdown_{{ version }}.tar.gz
-  sha256: b40c2977d693cd32393e1c0ec5cda27c6062318751c974e78e0201df65592c05
+  sha256: 763e58bdbefa1c32ce6a8a8170b0f15d3d08fc647d266a740d0670ceb2fe9878
 
 build:
   number: 0
@@ -17,10 +17,15 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-bookdown >=0.22
@@ -31,7 +36,7 @@ requirements:
     - r-later
     - r-rmarkdown >=2.8
     - r-servr >=0.21
-    - r-xfun >=0.29
+    - r-xfun >=0.34
     - r-yaml >=2.1.19
   run:
     - r-base
@@ -43,7 +48,7 @@ requirements:
     - r-later
     - r-rmarkdown >=2.8
     - r-servr >=0.21
-    - r-xfun >=0.29
+    - r-xfun >=0.34
     - r-yaml >=2.1.19
 
 test:
@@ -52,7 +57,8 @@ test:
     - "\"%R%\" -e \"library('blogdown')\""  # [win]
 
 about:
-  home: https://github.com/rstudio/blogdown
+  home: https://pkgs.rstudio.com/blogdown/
+  dev_url: https://github.com/rstudio/blogdown
   license: GPL-3.0-only
   summary: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
   license_family: GPL3

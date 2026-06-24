@@ -3,20 +3,23 @@ About r-blogdown-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-blogdown-feedstock/blob/main/LICENSE.txt)
 
-Home: https://github.com/rstudio/blogdown
+Home: https://pkgs.rstudio.com/blogdown/
 
 Package license: GPL-3.0-only
 
 Summary: Write blog posts and web pages in R Markdown. This package supports the static site generator 'Hugo' (<https://gohugo.io>) best, and it also supports 'Jekyll' (<http://jekyllrb.com>) and 'Hexo' (<https://hexo.io>).
 
+Development: https://github.com/rstudio/blogdown
+
 Current build status
 ====================
 
 
-<table><tr><td>All platforms:</td>
+<table><tr>
+    <td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=7176&branchName=main">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-blogdown-feedstock?branchName=main">
+      <a href="https://github.com/conda-forge/r-blogdown-feedstock/actions/workflows/conda-build.yml">
+        <img src="https://github.com/conda-forge/r-blogdown-feedstock/actions/workflows/conda-build.yml/badge.svg?event=push&branch=main">
       </a>
     </td>
   </tr>
